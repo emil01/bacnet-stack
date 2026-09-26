@@ -415,6 +415,12 @@ xplained: ports/xplained/Makefile
 xplained-clean: ports/xplained/Makefile
 	$(MAKE) -s -C ports/xplained clean
 
+.PHONY: particle
+particle:
+	@test -n "$(PARTICLE_PROJECT_DIR)" || \
+		(echo "Set PARTICLE_PROJECT_DIR to a Particle project" >&2; exit 2)
+	./ports/particle/particle-sync.sh "$(PARTICLE_PROJECT_DIR)"
+
 .PHONY: mstpsnap
 mstpsnap:
 	$(MAKE) -s -C apps $@
