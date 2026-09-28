@@ -14,7 +14,8 @@
 #define MAX_APDU 480
 #define MAX_TSM_TRANSACTIONS 4
 #define MAX_ADDRESS_CACHE 8
-#define DLMSTP_MAX_INFO_FRAMES 3
+/* MS/TP PDU ring length. Must be a power of two or the queue never initializes. */
+#define DLMSTP_MAX_INFO_FRAMES 4
 
 #define PRINT_ENABLED 0
 #define CRC_USE_TABLE
