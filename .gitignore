@@ -115,3 +115,4 @@ apps/piface/libpifacedigital/
 .venv/
 .github/prompts
 .agents/
+.DS_Store
